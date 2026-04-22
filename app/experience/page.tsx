@@ -28,11 +28,11 @@ export default async function ExperiencePage() {
 
         <PhotoBanner
           photo={sitePhotos.fakarava2}
-          className="mt-8 max-w-3xl"
+          className="mt-8 w-full"
           priority
         />
 
-        <article className="prose mt-10 max-w-3xl">{content}</article>
+        <article className="prose mt-10 max-w-none">{content}</article>
       </div>
     </main>
   );

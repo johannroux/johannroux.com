@@ -141,7 +141,7 @@ export function HeroVisual({
               strong quality bars.
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {["Backend", "Leadership", "Regulated systems"].map((t) => (
+              {["Backend", "Leadership", "Product mindset"].map((t) => (
                 <span
                   key={t}
                   className="rounded-full border border-border/70 bg-surface/70 px-3 py-1 text-xs font-medium shadow-soft"
@@ -153,9 +153,6 @@ export function HeroVisual({
           </div>
         </div>
 
-        <div className="mt-4 text-[10px] leading-none text-muted/55">
-          Photos © {sitePhotos.greenland.credit}
-        </div>
       </div>
     </div>
   );

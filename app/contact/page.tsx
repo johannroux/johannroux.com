@@ -30,7 +30,7 @@ export default async function ContactPage() {
 
         <PhotoBanner
           photo={sitePhotos.fakarava3}
-          className="mt-8 max-w-2xl"
+          className="mt-8 w-full"
           priority
         />
 
@@ -60,7 +60,7 @@ export default async function ContactPage() {
                 GitHub →
               </Link>
               <Link
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/johannroux/"
                 className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
                 target="_blank"
                 rel="noreferrer"
@@ -71,7 +71,7 @@ export default async function ContactPage() {
           </div>
         </div>
 
-        <article className="prose mt-10 max-w-2xl">{content}</article>
+        <article className="prose mt-10 max-w-none">{content}</article>
       </div>
     </main>
   );

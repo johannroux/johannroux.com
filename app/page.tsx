@@ -4,6 +4,7 @@ import { Callout } from "@/components/ui/Callout";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { HeroVisual } from "@/components/home/HeroVisual";
+import { CompanyChip } from "@/components/ui/CompanyChip";
 
 export default function Home() {
   return (
@@ -92,13 +93,15 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2">
           <Card>
             <CardBody>
-              <div className="flex items-baseline justify-between gap-3">
-                <div className="text-sm font-semibold tracking-tight">
-                  Ada Health
-                </div>
+              <div className="flex items-center justify-between gap-3">
+                <CompanyChip
+                  name="Ada Health"
+                  logoSrc="/icons/companies/ada.png"
+                  className="px-4 py-2 text-sm"
+                />
                 <div className="text-xs text-muted">Berlin</div>
               </div>
-              <p className="mt-2 text-sm text-muted">
+              <p className="mt-4 text-sm text-muted">
                 Backend engineer → engineering manager. Built and operated
                 medical intelligence backend, working with clinicians and AI
                 teams in a regulated context.
@@ -116,13 +119,15 @@ export default function Home() {
 
           <Card>
             <CardBody>
-              <div className="flex items-baseline justify-between gap-3">
-                <div className="text-sm font-semibold tracking-tight">
-                  BCG Digital Ventures (BCG X)
-                </div>
+              <div className="flex items-center justify-between gap-3">
+                <CompanyChip
+                  name="BCG X"
+                  logoSrc="/icons/companies/bcg-dv.png"
+                  className="px-4 py-2 text-sm"
+                />
                 <div className="text-xs text-muted">Berlin</div>
               </div>
-              <p className="mt-2 text-sm text-muted">
+              <p className="mt-4 text-sm text-muted">
                 Venture building across multiple products and stacks, with a
                 strong bias for shipping and iteration.
               </p>

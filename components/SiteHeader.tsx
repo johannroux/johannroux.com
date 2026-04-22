@@ -31,7 +31,12 @@ export function SiteHeader() {
         <div className="flex items-center gap-2 sm:hidden">
           <Link
             href="/contact"
-            className="rounded-full border border-border bg-surface px-3 py-1.5 text-sm font-medium shadow-soft"
+            className={cn(
+              "rounded-full border border-border bg-surface px-3 py-1.5 text-sm font-medium shadow-soft",
+              "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
+              "hover:bg-surface/80 motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
+              "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
+            )}
           >
             Contact
           </Link>

@@ -28,11 +28,11 @@ export default async function AboutPage() {
 
         <PhotoBanner
           photo={sitePhotos.greenland}
-          className="mt-8 max-w-2xl"
+          className="mt-8 w-full"
           priority
         />
 
-        <article className="prose mt-10 max-w-2xl">{content}</article>
+        <article className="prose mt-10 max-w-none">{content}</article>
       </div>
     </main>
   );

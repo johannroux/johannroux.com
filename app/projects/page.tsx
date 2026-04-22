@@ -96,6 +96,50 @@ export default async function ProjectsPage() {
                   Open →
                 </Link>
               </div>
+
+              <div
+                className={cn(
+                  "relative mt-7 h-[240px] w-full",
+                  "sm:h-[280px]",
+                )}
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -left-10 top-6 h-44 w-44 rounded-full bg-[color:var(--color-accent)]/10 blur-3xl"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-10 bottom-2 h-52 w-52 rounded-full bg-[color:var(--color-accent)]/10 blur-3xl"
+                />
+
+                <div className="absolute left-[10%] top-7 w-[190px] -rotate-[10deg] sm:left-[12%] sm:top-8 sm:w-[220px]">
+                  <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+                    <Image
+                      src="/fitprimers/1.png"
+                      alt="FitPrimers exercise screen"
+                      width={900}
+                      height={1200}
+                      className="h-auto w-full rounded-[22px] object-cover"
+                      sizes="(min-width: 640px) 220px, 190px"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+
+                <div className="absolute right-[8%] top-10 w-[200px] rotate-[8deg] sm:right-[10%] sm:top-11 sm:w-[235px]">
+                  <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+                    <Image
+                      src="/fitprimers/2.png"
+                      alt="FitPrimers program screen"
+                      width={900}
+                      height={1200}
+                      className="h-auto w-full rounded-[22px] object-cover"
+                      sizes="(min-width: 640px) 235px, 200px"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+              </div>
             </CardBody>
           </Card>
 
@@ -237,7 +281,7 @@ export default async function ProjectsPage() {
               },
               {
                 name: "LadenZeile",
-                href: "https://www.ladenzeile.de/",
+                href: "https://www.linkedin.com/company/ladenzeile-gmbh/about/",
                 logoSrc: "/icons/companies/ladenzeile.png",
               },
             ].map((c) => (
@@ -248,7 +292,10 @@ export default async function ProjectsPage() {
                 rel="noreferrer"
                 className={cn(
                   "inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold tracking-tight shadow-soft",
-                  "transition-colors hover:border-border/80 hover:bg-surface/80",
+                  "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
+                  "motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
+                  "hover:border-border/80 hover:bg-surface/80",
+                  "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
                 )}
               >
                 <Image
