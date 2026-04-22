@@ -1,9 +1,11 @@
-import { compileMDX } from "next-mdx-remote/rsc";
-import type { MDXComponents } from "mdx/types";
-import { CompanyChip } from "@/components/ui/CompanyChip";
+import {compileMDX} from "next-mdx-remote/rsc";
+import type {MDXComponents} from "mdx/types";
+import {CompanyChip} from "@/components/ui/CompanyChip";
+import {InstitutionChip} from "@/components/ui/InstitutionChip";
 
 const components: MDXComponents = {
   CompanyChip,
+    InstitutionChip,
   a: (props) => (
     <a
       {...props}
