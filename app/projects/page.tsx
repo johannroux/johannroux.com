@@ -213,12 +213,15 @@ export default async function ProjectsPage() {
                           className="mt-0.5 grid h-14 w-14 shrink-0 aspect-square place-items-center rounded-[18px] border border-border/60 shadow-soft"
                           style={{ backgroundColor: app.iconBg }}
                         >
-                          <img
+                            <Image
                             src={app.iconSrc}
                             alt=""
+                            aria-hidden="true"
+                            width={48}
+                            height={48}
                             className="h-12 w-12 rounded-[16px] object-contain"
+                            sizes="48px"
                             loading="lazy"
-                            decoding="async"
                           />
                         </div>
                         <div>

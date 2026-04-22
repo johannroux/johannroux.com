@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {Button} from "@/components/ui/Button";
 import {Callout} from "@/components/ui/Callout";
 import {Card, CardBody} from "@/components/ui/Card";
@@ -158,12 +159,15 @@ export default function Home() {
                             className="grid h-12 w-12 shrink-0 place-items-center rounded-[16px] border border-border/60 shadow-soft transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
                             style={{backgroundColor: i.bg}}
                         >
-                            <img
+                            <Image
                                 src={i.src}
                                 alt=""
+                                aria-hidden="true"
+                                width={40}
+                                height={40}
                                 className="h-10 w-10 rounded-[14px] object-contain"
+                                sizes="40px"
                                 loading="lazy"
-                                decoding="async"
                             />
                         </div>
                     ))}

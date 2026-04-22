@@ -41,11 +41,11 @@ export default async function ContactPage() {
               The fastest way to reach me.
             </p>
             <div className="mt-5">
-                <Button
-                    href="mailto:hello@johannroux.com"
-                    external
-                    variant="primary"
-                >
+              <Button
+                  href="mailto:hello@johannroux.com"
+                  external
+                  variant="primary"
+              >
                 hello@johannroux.com
               </Button>
             </div>

@@ -12,8 +12,8 @@ export function Button(
     | (CommonProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
     | (CommonProps & { href: string; external?: boolean }),
 ) {
-    const variant =
-        "variant" in props && props.variant ? props.variant : "primary";
+  const variant =
+      "variant" in props && props.variant ? props.variant : "primary";
   const className =
     "className" in props && props.className ? props.className : undefined;
 

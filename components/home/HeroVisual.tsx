@@ -2,6 +2,7 @@
 
 import {cn} from "@/lib/cn";
 import {sitePhotos} from "@/lib/photos";
+import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 
@@ -90,9 +91,9 @@ export function HeroVisual({
 
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-semibold tracking-tight">
-                Johann Roux
-            </div>
+          <div className="text-sm font-semibold tracking-tight">
+            Johann Roux
+          </div>
           <Link
             href="/about"
             className="text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors hover:text-foreground hover:decoration-[color:var(--color-accent)]"
@@ -104,17 +105,18 @@ export function HeroVisual({
         <div className="mt-4 grid grid-cols-[auto_1fr] items-center gap-4">
           <div className="relative h-[92px] w-[92px] sm:h-[110px] sm:w-[110px]">
             {imgOk ? (
-              <img
+                <Image
                 src={src}
                 alt="Portrait of Johann Roux"
+                fill
+                priority
+                sizes="(min-width: 640px) 110px, 92px"
                 className={cn(
-                  "h-full w-full object-cover",
+                    "object-cover",
                   "rounded-[26px]",
                   "ring-1 ring-border/70",
                   "shadow-[0_18px_60px_rgba(0,0,0,0.22)]",
                 )}
-                loading="eager"
-                decoding="async"
               />
             ) : (
               <div
