@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf7;
+  --foreground: #111112;
+  --muted: #6b6b6f;
+  --surface: #ffffff;
+  --border: rgba(17, 17, 18, 0.12);
+  --accent: #155e75;
+  --accent-2: #0f766e;
+  --shadow: 0 1px 0 rgba(17, 17, 18, 0.06), 0 8px 24px rgba(17, 17, 18, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent-2);
+  --shadow-soft: var(--shadow);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-card: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0c0f;
+    --foreground: #f4f4f5;
+    --muted: rgba(244, 244, 245, 0.64);
+    --surface: rgba(255, 255, 255, 0.04);
+    --border: rgba(244, 244, 245, 0.12);
+    --accent: #67e8f9;
+    --accent-2: #5eead4;
+    --shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 38px rgba(0, 0, 0, 0.45);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 20%, transparent);
+}
+
+/* Subtle grid for “crafted” feel */
+.bg-grid {
+  background-image: linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .bg-grid {
+    background-image: none;
+  }
+}
+
+.prose {
+  color: var(--foreground);
+}
+
+.prose :is(p, ul, ol) {
+  color: color-mix(in oklab, var(--foreground) 82%, transparent);
+  line-height: 1.75;
+}
+
+.prose :is(h1, h2, h3) {
+  letter-spacing: -0.02em;
+}
+
+.prose a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--accent) 55%, transparent);
+  text-underline-offset: 4px;
+}
