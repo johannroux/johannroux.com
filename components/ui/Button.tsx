@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cn } from "@/lib/cn";
+import {cn} from "@/lib/cn";
 
 type CommonProps = {
   variant?: "primary" | "secondary";
@@ -12,7 +12,8 @@ export function Button(
     | (CommonProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
     | (CommonProps & { href: string; external?: boolean }),
 ) {
-  const variant = "variant" in props && props.variant ? props.variant : "primary";
+    const variant =
+        "variant" in props && props.variant ? props.variant : "primary";
   const className =
     "className" in props && props.className ? props.className : undefined;
 
@@ -23,10 +24,7 @@ export function Button(
 
   const styles =
     variant === "primary"
-      ? cn(
-          "bg-foreground text-background",
-          "hover:bg-foreground/90",
-        )
+        ? cn("bg-foreground text-background", "hover:bg-foreground/90")
       : cn(
           "border border-border bg-surface text-foreground",
           "hover:bg-foreground/5",
@@ -55,4 +53,3 @@ export function Button(
     </button>
   );
 }
-

@@ -39,4 +39,3 @@ export const sitePhotos = {
     credit: SITE_PHOTO_CREDIT,
   },
 } satisfies Record<string, SitePhoto>;
-

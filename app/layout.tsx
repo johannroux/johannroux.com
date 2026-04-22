@@ -1,8 +1,8 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {Metadata, Viewport} from "next";
+import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
+import {SiteFooter} from "@/components/SiteFooter";
+import {SiteHeader} from "@/components/SiteHeader";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -28,10 +28,20 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: `${basePath}/favicon/favicon.ico` },
-      { url: `${basePath}/favicon/favicon-16x16.png`, sizes: "16x16", type: "image/png" },
-      { url: `${basePath}/favicon/favicon-32x32.png`, sizes: "32x32", type: "image/png" },
+        {
+            url: `${basePath}/favicon/favicon-16x16.png`,
+            sizes: "16x16",
+            type: "image/png",
+        },
+        {
+            url: `${basePath}/favicon/favicon-32x32.png`,
+            sizes: "32x32",
+            type: "image/png",
+        },
     ],
-    apple: [{ url: `${basePath}/favicon/apple-touch-icon.png`, sizes: "180x180" }],
+      apple: [
+          {url: `${basePath}/favicon/apple-touch-icon.png`, sizes: "180x180"},
+      ],
     shortcut: [{ url: `${basePath}/favicon/favicon.ico` }],
   },
 };

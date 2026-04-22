@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { NavLink } from "@/components/ui/NavLink";
-import { cn } from "@/lib/cn";
+import {NavLink} from "@/components/ui/NavLink";
+import {cn} from "@/lib/cn";
 
 export function SiteHeader() {
   return (
@@ -45,4 +45,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

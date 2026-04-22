@@ -5,7 +5,7 @@ import {InstitutionChip} from "@/components/ui/InstitutionChip";
 
 const components: MDXComponents = {
   CompanyChip,
-    InstitutionChip,
+  InstitutionChip,
   a: (props) => (
     <a
       {...props}
@@ -36,9 +36,15 @@ const components: MDXComponents = {
       {children}
     </h3>
   ),
-  p: (props) => <p {...props} className="mt-4 leading-relaxed text-foreground/80" />,
-  ul: (props) => <ul {...props} className="mt-4 list-disc pl-6 text-foreground/80" />,
-  ol: (props) => <ol {...props} className="mt-4 list-decimal pl-6 text-foreground/80" />,
+  p: (props) => (
+      <p {...props} className="mt-4 leading-relaxed text-foreground/80"/>
+  ),
+  ul: (props) => (
+      <ul {...props} className="mt-4 list-disc pl-6 text-foreground/80"/>
+  ),
+  ol: (props) => (
+      <ol {...props} className="mt-4 list-decimal pl-6 text-foreground/80"/>
+  ),
   li: (props) => <li {...props} className="mt-2" />,
 };
 
@@ -53,4 +59,3 @@ export async function renderMdx(source: string) {
 
   return content;
 }
-

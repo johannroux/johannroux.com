@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/cn";
-import { sitePhotos } from "@/lib/photos";
+import {cn} from "@/lib/cn";
+import {sitePhotos} from "@/lib/photos";
 import Link from "next/link";
 import * as React from "react";
 
@@ -90,7 +90,9 @@ export function HeroVisual({
 
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
-          <div className="text-sm font-semibold tracking-tight">Johann Roux</div>
+            <div className="text-sm font-semibold tracking-tight">
+                Johann Roux
+            </div>
           <Link
             href="/about"
             className="text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors hover:text-foreground hover:decoration-[color:var(--color-accent)]"
@@ -152,9 +154,7 @@ export function HeroVisual({
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
 }
-

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/cn";
+import {cn} from "@/lib/cn";
 
 export function Card({
   className,
@@ -28,4 +28,3 @@ export function CardBody({
 }>) {
   return <div className={cn("p-6 sm:p-8", className)}>{children}</div>;
 }
-

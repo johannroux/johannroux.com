@@ -65,4 +65,3 @@ export async function getAllPosts() {
     a.frontmatter.date < b.frontmatter.date ? 1 : -1,
   );
 }
-

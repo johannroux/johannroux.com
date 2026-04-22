@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+build/
+
+# YAML is intentionally excluded from Prettier formatting.
+**/*.yml
+**/*.yaml

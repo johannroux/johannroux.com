@@ -34,7 +34,7 @@
     --border: rgba(244, 244, 245, 0.12);
     --accent: #67e8f9;
     --accent-2: #5eead4;
-    --shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 38px rgba(0, 0, 0, 0.45);
+      --shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 38px rgba(0, 0, 0, 0.45);
   }
 }
 
@@ -53,8 +53,16 @@ body {
 
 /* Subtle grid for “crafted” feel */
 .bg-grid {
-  background-image: linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
+    background-image: linear-gradient(
+            to right,
+            color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
+            transparent 1px
+    ),
+    linear-gradient(
+            to bottom,
+            color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
+            transparent 1px
+    );
   background-size: 32px 32px;
   background-position: center;
 }

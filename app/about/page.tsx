@@ -1,7 +1,7 @@
-import { getPage } from "@/lib/content";
-import { renderMdx } from "@/lib/mdx";
-import { PhotoBanner } from "@/components/PhotoBanner";
-import { sitePhotos } from "@/lib/photos";
+import {getPage} from "@/lib/content";
+import {renderMdx} from "@/lib/mdx";
+import {PhotoBanner} from "@/components/PhotoBanner";
+import {sitePhotos} from "@/lib/photos";
 
 export const dynamic = "force-static";
 
@@ -37,4 +37,3 @@ export default async function AboutPage() {
     </main>
   );
 }
-

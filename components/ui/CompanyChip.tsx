@@ -9,9 +9,12 @@ type CompanyChipProps = {
   className?: string;
 };
 
-export function CompanyChip(
-  { name, logoSrc, href, className }: Readonly<CompanyChipProps>,
-) {
+export function CompanyChip({
+                                name,
+                                logoSrc,
+                                href,
+                                className,
+                            }: Readonly<CompanyChipProps>) {
   const classNames = cn(
     "inline-flex align-middle items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-2.5",
     "text-base font-semibold tracking-tight shadow-soft",
@@ -59,4 +62,3 @@ export function CompanyChip(
     </span>
   );
 }
-

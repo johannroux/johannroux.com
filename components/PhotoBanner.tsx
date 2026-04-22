@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { cn } from "@/lib/cn";
-import type { SitePhoto } from "@/lib/photos";
+import {cn} from "@/lib/cn";
+import type {SitePhoto} from "@/lib/photos";
 
 export function PhotoBanner({
   photo,
@@ -56,4 +56,3 @@ export function PhotoBanner({
     </figure>
   );
 }
-

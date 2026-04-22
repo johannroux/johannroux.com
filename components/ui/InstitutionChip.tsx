@@ -8,9 +8,12 @@ type InstitutionChipProps = {
     children: React.ReactNode;
 };
 
-export function InstitutionChip(
-    {name, href, className, children}: Readonly<InstitutionChipProps>,
-) {
+export function InstitutionChip({
+                                    name,
+                                    href,
+                                    className,
+                                    children,
+                                }: Readonly<InstitutionChipProps>) {
     const classNames = cn(
         "inline-flex align-middle items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-2.5",
         "text-base font-semibold tracking-tight shadow-soft",

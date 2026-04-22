@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { getPage } from "@/lib/content";
-import { renderMdx } from "@/lib/mdx";
-import { Button } from "@/components/ui/Button";
-import { PhotoBanner } from "@/components/PhotoBanner";
-import { sitePhotos } from "@/lib/photos";
+import {getPage} from "@/lib/content";
+import {renderMdx} from "@/lib/mdx";
+import {Button} from "@/components/ui/Button";
+import {PhotoBanner} from "@/components/PhotoBanner";
+import {sitePhotos} from "@/lib/photos";
 
 export const dynamic = "force-static";
 
@@ -41,7 +41,11 @@ export default async function ContactPage() {
               The fastest way to reach me.
             </p>
             <div className="mt-5">
-              <Button href="mailto:hello@johannroux.com" external variant="primary">
+                <Button
+                    href="mailto:hello@johannroux.com"
+                    external
+                    variant="primary"
+                >
                 hello@johannroux.com
               </Button>
             </div>
@@ -76,4 +80,3 @@ export default async function ContactPage() {
     </main>
   );
 }
-
