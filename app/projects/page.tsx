@@ -1,12 +1,12 @@
-import { getPage } from "@/lib/content";
+import {getPage} from "@/lib/content";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardBody } from "@/components/ui/Card";
-import { cn } from "@/lib/cn";
-import { KhonsuLogo } from "@/components/icons/KhonsuLogo";
-import { FitPrimersLogo } from "@/components/icons/FitPrimersLogo";
-import { PhotoBanner } from "@/components/PhotoBanner";
-import { sitePhotos } from "@/lib/photos";
+import {Card, CardBody} from "@/components/ui/Card";
+import {cn} from "@/lib/cn";
+import {KhonsuLogo} from "@/components/icons/KhonsuLogo";
+import {FitPrimersLogo} from "@/components/icons/FitPrimersLogo";
+import {PhotoBanner} from "@/components/PhotoBanner";
+import {sitePhotos} from "@/lib/photos";
 
 export const dynamic = "force-static";
 
@@ -42,8 +42,7 @@ export default async function ProjectsPage() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-sm font-semibold tracking-tight">
-                    FitPrimers
-                    {" "}
+                      FitPrimers{" "}
                     <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                       in progress
                     </span>
@@ -98,10 +97,7 @@ export default async function ProjectsPage() {
               </div>
 
               <div
-                className={cn(
-                  "relative mt-7 h-[240px] w-full",
-                  "sm:h-[280px]",
-                )}
+                  className={cn("relative mt-7 h-[240px] w-full", "sm:h-[280px]")}
               >
                 <div
                   aria-hidden="true"
@@ -148,8 +144,7 @@ export default async function ProjectsPage() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="text-sm font-semibold tracking-tight">
-                    Khonsu Development
-                    {" "}
+                      Khonsu Development{" "}
                     <span className="ml-2 align-middle text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                       since 2015
                     </span>
@@ -164,7 +159,11 @@ export default async function ProjectsPage() {
                   aria-hidden="true"
                   className="grid h-14 w-14 shrink-0 aspect-square place-items-center"
                 >
-                  <KhonsuLogo className="h-10 w-10" title="" aria-hidden="true" />
+                    <KhonsuLogo
+                        className="h-10 w-10"
+                        title=""
+                        aria-hidden="true"
+                    />
                 </div>
               </div>
 
@@ -182,7 +181,8 @@ export default async function ProjectsPage() {
                     name: "World of Dinosaurs",
                     href: "https://play.google.com/store/apps/details?id=eu.khonsu.dinosaurs",
                     meta: "Educational deep dives",
-                    subtext: "Explore species, eras, and facts—then test yourself.",
+                      subtext:
+                          "Explore species, eras, and facts—then test yourself.",
                     iconSrc: "/icons/khonsu/dinosaurs.png",
                     iconBg: "#C0CA33",
                   },
@@ -190,7 +190,8 @@ export default async function ProjectsPage() {
                     name: "Freestyle Rap (collab)",
                     href: "https://play.google.com/store/apps/details?id=com.lyricspiration.freestyle",
                     meta: "With Lyricspiration",
-                    subtext: "Practice freestyle with prompts, beats, and wordplay.",
+                      subtext:
+                          "Practice freestyle with prompts, beats, and wordplay.",
                     iconSrc: "/icons/khonsu/freestyle.png",
                     iconBg: "#FFB200",
                   },
@@ -259,7 +260,12 @@ export default async function ProjectsPage() {
             Previously
           </div>
           <h2 className="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
-            Teams and products I’ve helped ship
+              <Link
+                  href="/experience"
+                  className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+              >
+                  Teams and products I’ve helped ship
+              </Link>
           </h2>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -320,4 +326,3 @@ export default async function ProjectsPage() {
     </main>
   );
 }
-

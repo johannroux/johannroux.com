@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
-import { Callout } from "@/components/ui/Callout";
-import { Card, CardBody } from "@/components/ui/Card";
-import { Section } from "@/components/ui/Section";
-import { HeroVisual } from "@/components/home/HeroVisual";
-import { CompanyChip } from "@/components/ui/CompanyChip";
+import {Button} from "@/components/ui/Button";
+import {Callout} from "@/components/ui/Callout";
+import {Card, CardBody} from "@/components/ui/Card";
+import {Section} from "@/components/ui/Section";
+import {HeroVisual} from "@/components/home/HeroVisual";
+import {CompanyChip} from "@/components/ui/CompanyChip";
+import {FitPrimersLogo} from "@/components/icons/FitPrimersLogo";
+import {KhonsuLogo} from "@/components/icons/KhonsuLogo";
 
 export default function Home() {
   return (
@@ -93,18 +95,25 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2">
           <Card>
             <CardBody>
-              <div className="flex items-center justify-between gap-3">
-                <CompanyChip
-                  name="Ada Health"
-                  logoSrc="/icons/companies/ada.png"
-                  className="px-4 py-2 text-sm"
-                />
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap items-center gap-2">
+                        <CompanyChip
+                            name="Ada Health"
+                            logoSrc="/icons/companies/ada.png"
+                            className="px-4 py-2 text-sm"
+                        />
+                        <CompanyChip
+                            name="BCG X"
+                            logoSrc="/icons/companies/bcg-dv.png"
+                            className="px-4 py-2 text-sm"
+                        />
+                    </div>
                 <div className="text-xs text-muted">Berlin</div>
               </div>
               <p className="mt-4 text-sm text-muted">
-                Backend engineer → engineering manager. Built and operated
-                medical intelligence backend, working with clinicians and AI
-                teams in a regulated context.
+                  Professional work across startups and consulting: backend
+                  engineering, platform ownership, and team leadership—shipping in
+                  regulated, high-stakes environments.
               </p>
               <div className="mt-4">
                 <Link
@@ -120,16 +129,48 @@ export default function Home() {
           <Card>
             <CardBody>
               <div className="flex items-center justify-between gap-3">
-                <CompanyChip
-                  name="BCG X"
-                  logoSrc="/icons/companies/bcg-dv.png"
-                  className="px-4 py-2 text-sm"
-                />
-                <div className="text-xs text-muted">Berlin</div>
+                  <div className="text-sm font-semibold tracking-tight">
+                      Personal projects
+                  </div>
+                  <div className="text-xs text-muted">Builder mode</div>
+              </div>
+                <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <div
+                        aria-hidden="true"
+                        className="grid h-12 w-12 shrink-0 place-items-center transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
+                    >
+                        <FitPrimersLogo className="h-10 w-10" title="" aria-hidden/>
+                    </div>
+                    <div
+                        aria-hidden="true"
+                        className="grid h-12 w-12 shrink-0 place-items-center transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
+                    >
+                        <KhonsuLogo className="h-9 w-9" title="" aria-hidden/>
+                    </div>
+                    {[
+                        {src: "/icons/khonsu/alphabets.png", bg: "#4EC3F7"},
+                        {src: "/icons/khonsu/dinosaurs.png", bg: "#C0CA33"},
+                        {src: "/icons/khonsu/freestyle.png", bg: "#FFB200"},
+                    ].map((i) => (
+                        <div
+                            key={i.src}
+                            aria-hidden="true"
+                            className="grid h-12 w-12 shrink-0 place-items-center rounded-[16px] border border-border/60 shadow-soft transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
+                            style={{backgroundColor: i.bg}}
+                        >
+                            <img
+                                src={i.src}
+                                alt=""
+                                className="h-10 w-10 rounded-[14px] object-contain"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    ))}
               </div>
               <p className="mt-4 text-sm text-muted">
-                Venture building across multiple products and stacks, with a
-                strong bias for shipping and iteration.
+                  Side projects where I iterate fast, sweat the details, and ship
+                  things end-to-end—from product to engineering.
               </p>
               <div className="mt-4">
                 <Link
