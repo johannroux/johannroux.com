@@ -19,9 +19,10 @@ export default function Home() {
                 I build reliable systems and high-performing teams.
               </h1>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted sm:text-xl">
-                I’m Johann, based in Berlin. I’ve led teams in regulated health
-                tech, shipped backend platforms, and partnered closely with
-                clinicians and AI engineers to deliver outcomes you can trust.
+                I’m Johann, an engineering manager and backend engineer based in
+                Berlin. I’ve built and scaled backend platforms across startups
+                and consulting, led teams through delivery, and partnered with
+                domain experts to ship software you can trust.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button href="/contact" variant="primary">
