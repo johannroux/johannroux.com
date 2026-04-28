@@ -17,19 +17,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # NOTE: actions/setup-node with `cache: pnpm` expects `pnpm` to already be
+      # available on PATH. We install pnpm first, then enable caching.
       - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          # Keep in sync with `package.json#packageManager`
+          version: 10.33.2
+
+      - name: Setup pnpm cache
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
 
       - name: Install dependencies
-        run: |
-          corepack enable
-          corepack pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Lint
-        run: corepack pnpm run lint
+        run: pnpm run lint
 
       - name: Build
-        run: corepack pnpm run build
+        run: pnpm run build
