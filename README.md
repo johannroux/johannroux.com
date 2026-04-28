@@ -5,9 +5,15 @@ Personal website built with [Next.js](https://nextjs.org). This repo is configur
 
 ### Development
 
+This repo is set up for pnpm. If you don't have pnpm installed, enable it via Corepack:
+
 ```bash
-npm install
-npm run dev
+corepack enable
+```
+
+```bash
+pnpm install
+pnpm run dev
 ```
 
 Then open `http://localhost:3000`.
@@ -15,12 +21,12 @@ Then open `http://localhost:3000`.
 ### Build
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### Deploy (Cloudflare Pages)
 
-- **Build command**: `npm run build`
+- **Build command**: `pnpm run build`
 - **Build output directory**: `out`
 
 #### Base path (only if deploying under a subpath)
