@@ -1,12 +1,12 @@
-import {getPage} from "@/lib/content";
+import { getPage } from "@/lib/content";
 import Image from "next/image";
 import Link from "next/link";
-import {Card, CardBody} from "@/components/ui/Card";
-import {cn} from "@/lib/cn";
-import {KhonsuLogo} from "@/components/icons/KhonsuLogo";
-import {FitPrimersLogo} from "@/components/icons/FitPrimersLogo";
-import {PhotoBanner} from "@/components/PhotoBanner";
-import {sitePhotos} from "@/lib/photos";
+import { Card, CardBody } from "@/components/ui/Card";
+import { cn } from "@/lib/cn";
+import { KhonsuLogo } from "@/components/icons/KhonsuLogo";
+import { FitPrimersLogo } from "@/components/icons/FitPrimersLogo";
+import { PhotoBanner } from "@/components/PhotoBanner";
+import { sitePhotos } from "@/lib/photos";
 
 export const dynamic = "force-static";
 
@@ -151,7 +151,7 @@ export default async function ProjectsPage() {
                   </div>
                   <p className="mt-2 text-sm text-muted">
                     Educational apps that turn curiosity into a treasure trove
-                    of information—designed for deep dives, with quizzes to test
+                      of information, designed for deep dives, with quizzes to test
                     what you’ve learned.
                   </p>
                 </div>
@@ -182,7 +182,7 @@ export default async function ProjectsPage() {
                     href: "https://play.google.com/store/apps/details?id=eu.khonsu.dinosaurs",
                     meta: "Educational deep dives",
                       subtext:
-                          "Explore species, eras, and facts—then test yourself.",
+                          "Explore species, eras, and facts, then test yourself.",
                     iconSrc: "/icons/khonsu/dinosaurs.png",
                     iconBg: "#C0CA33",
                   },
@@ -322,7 +322,7 @@ export default async function ProjectsPage() {
 
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
             I like high standards, measurable outcomes, and systems that stay
-            operable as they scale—technically and organizationally.
+              operable as they scale, technically and organizationally.
           </p>
         </section>
       </div>

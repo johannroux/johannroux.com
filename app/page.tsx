@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import {Button} from "@/components/ui/Button";
-import {Callout} from "@/components/ui/Callout";
-import {Card, CardBody} from "@/components/ui/Card";
-import {Section} from "@/components/ui/Section";
-import {HeroVisual} from "@/components/home/HeroVisual";
-import {CompanyChip} from "@/components/ui/CompanyChip";
-import {FitPrimersLogo} from "@/components/icons/FitPrimersLogo";
-import {KhonsuLogo} from "@/components/icons/KhonsuLogo";
+import { Button } from "@/components/ui/Button";
+import { Callout } from "@/components/ui/Callout";
+import { Card, CardBody } from "@/components/ui/Card";
+import { Section } from "@/components/ui/Section";
+import { HeroVisual } from "@/components/home/HeroVisual";
+import { CompanyChip } from "@/components/ui/CompanyChip";
+import { FitPrimersLogo } from "@/components/icons/FitPrimersLogo";
+import { KhonsuLogo } from "@/components/icons/KhonsuLogo";
 
 export default function Home() {
   return (
@@ -113,7 +113,7 @@ export default function Home() {
               </div>
               <p className="mt-4 text-sm text-muted">
                   Professional work across startups and consulting: backend
-                  engineering, platform ownership, and team leadership—shipping in
+                  engineering, platform ownership, and team leadership, shipping in
                   regulated, high-stakes environments.
               </p>
               <div className="mt-4">
@@ -174,7 +174,7 @@ export default function Home() {
               </div>
               <p className="mt-4 text-sm text-muted">
                   Side projects where I iterate fast, sweat the details, and ship
-                  things end-to-end—from product to engineering.
+                  things end-to-end, from product to engineering.
               </p>
               <div className="mt-4">
                 <Link
