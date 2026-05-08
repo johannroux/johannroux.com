@@ -1,4 +1,5 @@
-import {cn} from "@/lib/cn";
+import { cn } from "@/lib/cn";
+import React from "react";
 
 export function Callout({
   title,
@@ -12,7 +13,7 @@ export function Callout({
   return (
     <div
       className={cn(
-        "rounded-[var(--radius-card)] border border-border bg-surface px-5 py-4 shadow-soft",
+          "rounded-(--radius-card) border border-border bg-surface px-5 py-4 shadow-soft",
         className,
       )}
     >

@@ -12,8 +12,8 @@ const RAW_SVG = fs.readFileSync(
 // white in globals.css. We rewrite the presentation attribute to a `style`
 // declaration because `var()` only resolves inside CSS, not in SVG attribute
 // values (notably in Safari).
-const SVG_MARKUP = RAW_SVG.replace(
-    /fill="#283753"/g,
+const SVG_MARKUP = RAW_SVG.replaceAll(
+    'fill="#283753"',
     'style="fill: var(--ada-navy, #283753)"',
 );
 

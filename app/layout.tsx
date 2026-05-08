@@ -1,8 +1,9 @@
-import type {Metadata, Viewport} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {SiteFooter} from "@/components/SiteFooter";
-import {SiteHeader} from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import React from "react";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

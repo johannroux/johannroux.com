@@ -1,4 +1,5 @@
-import {cn} from "@/lib/cn";
+import { cn } from "@/lib/cn";
+import React from "react";
 
 export function Section({
   eyebrow,

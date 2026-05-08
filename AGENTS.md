@@ -25,7 +25,7 @@ npm run lint
 npm run build
 ```
 
-### Static export + base path
+### Static export and base path
 
 - Static export is enabled with `trailingSlash: true`.
 - Deploys may set `NEXT_PUBLIC_BASE_PATH` to host under a subpath. This affects both `basePath` and `assetPrefix`.

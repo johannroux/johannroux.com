@@ -1,5 +1,6 @@
 import Link from "next/link";
-import {cn} from "@/lib/cn";
+import { cn } from "@/lib/cn";
+import React from "react";
 
 export function NavLink({
   href,

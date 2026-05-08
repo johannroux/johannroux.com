@@ -1,4 +1,5 @@
-import {cn} from "@/lib/cn";
+import { cn } from "@/lib/cn";
+import React from "react";
 
 export function Card({
   className,
@@ -10,7 +11,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-[var(--radius-card)] border border-border bg-surface shadow-soft",
+          "rounded-(--radius-card) border border-border bg-surface shadow-soft",
         className,
       )}
     >

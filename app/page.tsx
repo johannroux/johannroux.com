@@ -121,7 +121,7 @@ export default function Home() {
               <div className="mt-4">
                 <Link
                   href="/experience"
-                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
                 >
                   Full experience →
                 </Link>
@@ -181,7 +181,7 @@ export default function Home() {
               <div className="mt-4">
                 <Link
                   href="/projects"
-                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
                 >
                   Projects →
                 </Link>

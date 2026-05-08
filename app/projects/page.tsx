@@ -84,7 +84,7 @@ export default async function ProjectsPage() {
                   href="https://www.fitprimers.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
                 >
                   fitprimers.com →
                 </Link>
@@ -92,25 +92,25 @@ export default async function ProjectsPage() {
                   href="https://play.google.com/store/apps/details?id=com.eu.primers.fitprimers"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
                 >
                   Open →
                 </Link>
               </div>
 
               <div
-                  className={cn("relative mt-7 h-[240px] w-full", "sm:h-[280px]")}
+                  className={cn("relative mt-7 h-60 w-full", "sm:h-70")}
               >
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -left-10 top-6 h-44 w-44 rounded-full bg-[color:var(--color-accent)]/10 blur-3xl"
+                  className="pointer-events-none absolute -left-10 top-6 h-44 w-44 rounded-full bg-accent/10 blur-3xl"
                 />
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -right-10 bottom-2 h-52 w-52 rounded-full bg-[color:var(--color-accent)]/10 blur-3xl"
+                  className="pointer-events-none absolute -right-10 bottom-2 h-52 w-52 rounded-full bg-accent/10 blur-3xl"
                 />
 
-                <div className="absolute left-[10%] top-7 w-[190px] -rotate-[10deg] sm:left-[12%] sm:top-8 sm:w-[220px]">
+                  <div className="absolute left-[10%] top-7 w-47.5 rotate-[-10deg] sm:left-[12%] sm:top-8 sm:w-55">
                   <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
                     <Image
                       src="/fitprimers/1.png"
@@ -124,7 +124,7 @@ export default async function ProjectsPage() {
                   </div>
                 </div>
 
-                <div className="absolute right-[8%] top-10 w-[200px] rotate-[8deg] sm:right-[10%] sm:top-11 sm:w-[235px]">
+                  <div className="absolute right-[8%] top-10 w-50 rotate-[8deg] sm:right-[10%] sm:top-11 sm:w-58.75">
                   <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
                     <Image
                       src="/fitprimers/2.png"
@@ -239,7 +239,8 @@ export default async function ProjectsPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-1 text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors group-hover:text-foreground/85 group-hover:decoration-[color:var(--color-accent)]">
+                      <div
+                          className="mt-1 text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors group-hover:text-foreground/85 group-hover:decoration-(--color-accent)">
                       Open →
                     </div>
                   </Link>
@@ -251,7 +252,7 @@ export default async function ProjectsPage() {
                   href="https://khonsu.eu/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="text-sm font-medium underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
                 >
                   khonsu.eu →
                 </Link>
@@ -267,7 +268,7 @@ export default async function ProjectsPage() {
           <h2 className="mt-2 text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
               <Link
                   href="/experience"
-                  className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[color:var(--color-accent)]"
+                  className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-(--color-accent)"
               >
                   Teams and products I’ve helped ship
               </Link>

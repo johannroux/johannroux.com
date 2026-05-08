@@ -1,7 +1,7 @@
 "use client";
 
-import {cn} from "@/lib/cn";
-import {sitePhotos} from "@/lib/photos";
+import { cn } from "@/lib/cn";
+import { sitePhotos } from "@/lib/photos";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -23,7 +23,7 @@ function BackdropBlob({
     <div
       aria-hidden="true"
       className={cn(
-        "absolute rounded-[32px] border border-border/60 shadow-soft",
+          "absolute rounded-4xl border border-border/60 shadow-soft",
         "bg-cover bg-center",
         "blur-[0.2px]",
         className,
@@ -53,7 +53,7 @@ export function HeroVisual({
       }
     }
 
-    check();
+      void check();
     return () => {
       cancelled = true;
     };
@@ -78,11 +78,11 @@ export function HeroVisual({
         />
         <BackdropBlob
           url={NATURE_BACKDROPS[1]}
-          className="-right-14 top-10 h-40 w-56 rotate-[12deg] opacity-45 sm:h-48 sm:w-72"
+          className="-right-14 top-10 h-40 w-56 rotate-12 opacity-45 sm:h-48 sm:w-72"
         />
         <BackdropBlob
           url={NATURE_BACKDROPS[2]}
-          className="left-10 -bottom-12 h-40 w-64 rotate-[-14deg] opacity-40 sm:left-14 sm:h-48 sm:w-[22rem]"
+          className="left-10 -bottom-12 h-40 w-64 rotate-[-14deg] opacity-40 sm:left-14 sm:h-48 sm:w-88"
         />
 
         <div className="absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_0%,color-mix(in_oklab,var(--color-accent)_10%,transparent),transparent_65%)]" />
@@ -96,14 +96,14 @@ export function HeroVisual({
           </div>
           <Link
             href="/about"
-            className="text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors hover:text-foreground hover:decoration-[color:var(--color-accent)]"
+            className="text-xs font-medium text-muted underline decoration-transparent underline-offset-4 transition-colors hover:text-foreground hover:decoration-(--color-accent)"
           >
             About →
           </Link>
         </div>
 
         <div className="mt-4 grid grid-cols-[auto_1fr] items-center gap-4">
-          <div className="relative h-[92px] w-[92px] sm:h-[110px] sm:w-[110px]">
+            <div className="relative h-23 w-23 sm:h-27.5 sm:w-27.5">
             {imgOk ? (
                 <Image
                 src={src}

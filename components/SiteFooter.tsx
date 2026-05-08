@@ -50,8 +50,7 @@ function iconFor(label: SocialLabel): SocialIcon {
         case "Email":
             return MailIcon;
         default: {
-            const _exhaustive: never = label;
-            return _exhaustive;
+            return label;
         }
     }
 }

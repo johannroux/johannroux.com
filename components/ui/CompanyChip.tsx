@@ -11,13 +11,13 @@ type CompanyChipProps = {
     /**
      * When true, render the logo as a CSS mask tinted with the current text
      * color. Useful for monochrome SVG marks that should adapt to light/dark
-     * mode (e.g. black on light, white on dark). Ignored if `logo` is provided.
+     * mode (e.g., black on light, white on dark). Ignored if `logo` is provided.
      */
     monochrome?: boolean;
     /**
      * Custom React node to render as the logo. When provided, this replaces
      * the default `<Image>` (or mask) rendering and is used as-is. Useful for
-     * inline SVG components that need to react to CSS (e.g. theme-adaptive
+     * inline SVG components that need to react to CSS (e.g., theme-adaptive
      * fills via CSS variables or `currentColor`).
      *
      * Equivalent to passing the same node as `children` (children take

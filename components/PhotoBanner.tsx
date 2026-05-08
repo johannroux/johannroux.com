@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {cn} from "@/lib/cn";
-import type {SitePhoto} from "@/lib/photos";
+import { cn } from "@/lib/cn";
+import type { SitePhoto } from "@/lib/photos";
 
 export function PhotoBanner({
   photo,
@@ -19,7 +19,7 @@ export function PhotoBanner({
   return (
     <figure
       className={cn(
-        "relative overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface shadow-soft",
+          "relative overflow-hidden rounded-(--radius-card) border border-border bg-surface shadow-soft",
         "group",
         className,
       )}
@@ -36,7 +36,7 @@ export function PhotoBanner({
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent"
+          className="absolute inset-0 bg-linear-to-t from-background/70 via-background/10 to-transparent"
         />
       </div>
 
