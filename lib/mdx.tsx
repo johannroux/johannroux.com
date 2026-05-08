@@ -1,11 +1,13 @@
-import {compileMDX} from "next-mdx-remote/rsc";
-import type {MDXComponents} from "mdx/types";
-import {CompanyChip} from "@/components/ui/CompanyChip";
-import {InstitutionChip} from "@/components/ui/InstitutionChip";
+import { compileMDX } from "next-mdx-remote/rsc";
+import type { MDXComponents } from "mdx/types";
+import { CompanyChip } from "@/components/ui/CompanyChip";
+import { InstitutionChip } from "@/components/ui/InstitutionChip";
+import { AdaLogo } from "@/components/icons/AdaLogo";
 
 const components: MDXComponents = {
   CompanyChip,
   InstitutionChip,
+    AdaLogo,
   a: (props) => (
     <a
       {...props}

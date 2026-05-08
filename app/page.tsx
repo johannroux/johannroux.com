@@ -8,6 +8,7 @@ import { HeroVisual } from "@/components/home/HeroVisual";
 import { CompanyChip } from "@/components/ui/CompanyChip";
 import { FitPrimersLogo } from "@/components/icons/FitPrimersLogo";
 import { KhonsuLogo } from "@/components/icons/KhonsuLogo";
+import { AdaLogo } from "@/components/icons/AdaLogo";
 
 export default function Home() {
   return (
@@ -100,12 +101,13 @@ export default function Home() {
                     <div className="flex flex-wrap items-center gap-2">
                         <CompanyChip
                             name="Ada Health"
-                            logoSrc="/icons/companies/ada.png"
+                            logo={<AdaLogo />}
                             className="px-4 py-2 text-sm"
                         />
                         <CompanyChip
                             name="BCG X"
-                            logoSrc="/icons/companies/bcg-dv.png"
+                            logoSrc="/icons/companies/bcgdv.svg"
+                            monochrome
                             className="px-4 py-2 text-sm"
                         />
                     </div>

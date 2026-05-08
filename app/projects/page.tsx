@@ -1,3 +1,4 @@
+import * as React from "react";
 import { getPage } from "@/lib/content";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { cn } from "@/lib/cn";
 import { KhonsuLogo } from "@/components/icons/KhonsuLogo";
 import { FitPrimersLogo } from "@/components/icons/FitPrimersLogo";
+import { AdaLogo } from "@/components/icons/AdaLogo";
 import { PhotoBanner } from "@/components/PhotoBanner";
 import { sitePhotos } from "@/lib/photos";
 
@@ -272,52 +274,89 @@ export default async function ProjectsPage() {
           </h2>
 
           <div className="mt-5 flex flex-wrap gap-2">
-            {[
-              {
-                name: "Ada Health",
-                href: "https://ada.com/",
-                logoSrc: "/icons/companies/ada.png",
-              },
-              {
-                name: "BCG X",
-                href: "https://www.bcg.com/x/",
-                logoSrc: "/icons/companies/bcg-dv.png",
-              },
-              {
-                name: "OpenSC",
-                href: "https://opensc.org/",
-                logoSrc: "/icons/companies/opensc.png",
-              },
-              {
-                name: "LadenZeile",
-                href: "https://www.linkedin.com/company/ladenzeile-gmbh/about/",
-                logoSrc: "/icons/companies/ladenzeile.png",
-              },
-            ].map((c) => (
-              <Link
-                key={c.name}
-                href={c.href}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(
-                  "inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold tracking-tight shadow-soft",
-                  "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
-                  "motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
-                  "hover:border-border/80 hover:bg-surface/80",
-                  "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
-                )}
-              >
-                <Image
-                  src={c.logoSrc}
-                  alt=""
-                  aria-hidden="true"
-                  width={16}
-                  height={16}
-                  className="h-4 w-4 object-contain"
-                />
-                {c.name}
-              </Link>
-            ))}
+              {(
+                  [
+                      {
+                          name: "Ada Health",
+                          href: "https://ada.com/",
+                          logo: <AdaLogo className="h-4 w-4" />,
+                      },
+                      {
+                          name: "BCG X",
+                          href: "https://www.bcg.com/x/",
+                          logoSrc: "/icons/companies/bcgdv.svg",
+                          monochrome: true,
+                      },
+                      {
+                          name: "OpenSC",
+                          href: "https://opensc.org/",
+                          logoSrc: "/icons/companies/opensc.svg",
+                      },
+                      {
+                          name: "LadenZeile",
+                          href: "https://www.linkedin.com/company/ladenzeile-gmbh/about/",
+                          logoSrc: "/icons/companies/ladenzeile.svg",
+                      },
+                  ] as ReadonlyArray<{
+                      name: string;
+                      href: string;
+                      logo?: React.ReactNode;
+                      logoSrc?: string;
+                      monochrome?: boolean;
+                  }>
+              ).map((c) => {
+                  let logoNode: React.ReactNode = null;
+                  if (c.logo) {
+                      logoNode = c.logo;
+                  } else if (c.monochrome && c.logoSrc) {
+                      logoNode = (
+                          <span
+                              aria-hidden="true"
+                              className="inline-block h-4 w-4 bg-foreground"
+                              style={{
+                                  WebkitMaskImage: `url(${c.logoSrc})`,
+                                  maskImage: `url(${c.logoSrc})`,
+                                  WebkitMaskRepeat: "no-repeat",
+                                  maskRepeat: "no-repeat",
+                                  WebkitMaskPosition: "center",
+                                  maskPosition: "center",
+                                  WebkitMaskSize: "contain",
+                                  maskSize: "contain",
+                              }}
+                          />
+                      );
+                  } else if (c.logoSrc) {
+                      logoNode = (
+                          <Image
+                              src={c.logoSrc}
+                              alt=""
+                              aria-hidden="true"
+                              width={16}
+                              height={16}
+                              className="h-4 w-4 object-contain"
+                          />
+                      );
+                  }
+
+                  return (
+                      <Link
+                          key={c.name}
+                          href={c.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={cn(
+                              "inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold tracking-tight shadow-soft",
+                              "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
+                              "motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
+                              "hover:border-border/80 hover:bg-surface/80",
+                              "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
+                          )}
+                      >
+                          {logoNode}
+                          {c.name}
+                      </Link>
+                  );
+              })}
           </div>
 
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
