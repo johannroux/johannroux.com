@@ -4,7 +4,7 @@ import path from "node:path";
 import { cn } from "@/lib/cn";
 
 const RAW_SVG = fs.readFileSync(
-    path.join(process.cwd(), "public/education/kth.svg"),
+    path.join(process.cwd(), "public/icons/education/kth.svg"),
     "utf8",
 );
 
