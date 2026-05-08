@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   description:
     "Software engineering manager and backend engineer. Building reliable, high-impact products with strong engineering practices.",
   metadataBase: new URL("https://www.johannroux.com"),
-  manifest: `${basePath}/favicon/site.webmanifest`,
   icons: {
     icon: [
       { url: `${basePath}/favicon/favicon.ico` },
