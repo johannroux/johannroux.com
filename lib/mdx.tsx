@@ -3,11 +3,15 @@ import type { MDXComponents } from "mdx/types";
 import { CompanyChip } from "@/components/ui/CompanyChip";
 import { InstitutionChip } from "@/components/ui/InstitutionChip";
 import { AdaLogo } from "@/components/icons/AdaLogo";
+import { KthLogo } from "@/components/icons/KthLogo";
+import { GrenobleInpLogo } from "@/components/icons/GrenobleInpLogo";
 
 const components: MDXComponents = {
   CompanyChip,
   InstitutionChip,
     AdaLogo,
+    KthLogo,
+    GrenobleInpLogo,
   a: (props) => (
     <a
       {...props}
