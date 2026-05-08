@@ -2,6 +2,8 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import React from "react";
 
+import { CHIP_LOGO_SLOT_CLASS, CHIP_ROOT_CLASS, } from "@/components/ui/chip-shared";
+
 type InstitutionChipProps = {
     name: string;
     href?: string;
@@ -16,15 +18,16 @@ export function InstitutionChip({
                                     children,
                                 }: Readonly<InstitutionChipProps>) {
     const classNames = cn(
-        "inline-flex align-middle items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-2.5",
-        "text-base font-semibold tracking-tight shadow-soft",
+        "inline-flex select-none items-center gap-2",
+        CHIP_ROOT_CLASS,
         href
             ? cn(
+                "group",
                 "cursor-pointer !no-underline",
                 "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
-                "motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
-                "hover:border-border/80 hover:bg-surface/80",
-                "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
+                "hover:border-border/90 hover:bg-surface/85",
+                "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-[0_1px_0_rgba(17,17,18,0.05),0_14px_38px_rgba(17,17,18,0.08)]",
+                "motion-safe:active:translate-y-0 motion-safe:active:shadow-[0_1px_0_rgba(17,17,18,0.05),0_10px_28px_rgba(17,17,18,0.06)]",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
             )
             : null,
@@ -32,12 +35,9 @@ export function InstitutionChip({
     );
 
     const logo = (
-        <span
-            aria-hidden="true"
-            className="grid h-8 w-8 place-items-center text-foreground/90"
-        >
-      {children}
-    </span>
+        <span aria-hidden="true" className={CHIP_LOGO_SLOT_CLASS}>
+            {children}
+        </span>
     );
 
     if (href) {

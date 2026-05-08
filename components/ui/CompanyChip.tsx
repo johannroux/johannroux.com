@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
+import { CHIP_LOGO_SLOT_CLASS, CHIP_ROOT_CLASS, } from "@/components/ui/chip-shared";
+
 type CompanyChipProps = {
   name: string;
     logoSrc?: string;
@@ -39,16 +41,15 @@ export function CompanyChip({
                                 children,
                             }: Readonly<CompanyChipProps>) {
   const classNames = cn(
-    "inline-flex align-middle items-center gap-2.5 rounded-full border border-border bg-surface px-5 py-2.5",
-    "text-base font-semibold tracking-tight shadow-soft",
-      "select-none",
+      "inline-flex select-none items-center gap-2",
+      CHIP_ROOT_CLASS,
       "transition-colors motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out",
-      "motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.01]",
-      "hover:border-border/80 hover:bg-surface/80",
-      "motion-safe:active:translate-y-0 motion-safe:active:scale-100",
+      "hover:border-border/90 hover:bg-surface/85",
+      "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-[0_1px_0_rgba(17,17,18,0.05),0_14px_38px_rgba(17,17,18,0.08)]",
+      "motion-safe:active:translate-y-0 motion-safe:active:shadow-[0_1px_0_rgba(17,17,18,0.05),0_10px_28px_rgba(17,17,18,0.06)]",
       href
           ? cn(
-              "cursor-pointer !no-underline",
+              "group cursor-pointer !no-underline",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         )
       : null,
@@ -57,34 +58,42 @@ export function CompanyChip({
 
     let logoNode: React.ReactNode = null;
     if (children) {
-        logoNode = children;
+        logoNode = (
+            <span aria-hidden="true" className={CHIP_LOGO_SLOT_CLASS}>
+                {children}
+            </span>
+        );
     } else if (logo) {
         logoNode = logo;
     } else if (logoSrc) {
-        logoNode = monochrome ? (
-            <span
-                aria-hidden="true"
-                className="inline-block h-5 w-5 bg-foreground"
-                style={{
-                    WebkitMaskImage: `url(${logoSrc})`,
-                    maskImage: `url(${logoSrc})`,
-                    WebkitMaskRepeat: "no-repeat",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskPosition: "center",
-                    maskPosition: "center",
-                    WebkitMaskSize: "contain",
-                    maskSize: "contain",
-                }}
-            />
-        ) : (
-            <Image
-                src={logoSrc}
-                alt=""
-                aria-hidden="true"
-                width={20}
-                height={20}
-                className="h-5 w-5 object-contain"
-            />
+        logoNode = (
+            <span aria-hidden="true" className={CHIP_LOGO_SLOT_CLASS}>
+                {monochrome ? (
+                    <span
+                        aria-hidden="true"
+                        className="inline-block size-5 shrink-0 bg-foreground/90 leading-none"
+                        style={{
+                            WebkitMaskImage: `url(${logoSrc})`,
+                            maskImage: `url(${logoSrc})`,
+                            WebkitMaskRepeat: "no-repeat",
+                            maskRepeat: "no-repeat",
+                            WebkitMaskPosition: "center",
+                            maskPosition: "center",
+                            WebkitMaskSize: "contain",
+                            maskSize: "contain",
+                        }}
+                    />
+                ) : (
+                    <Image
+                        src={logoSrc}
+                        alt=""
+                        aria-hidden="true"
+                        width={20}
+                        height={20}
+                        className="size-5 shrink-0 object-contain"
+                    />
+                )}
+            </span>
         );
     }
 

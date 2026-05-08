@@ -1,6 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import type { MDXComponents } from "mdx/types";
 
+import { cn } from "@/lib/cn";
 import { CompanyChip } from "@/components/ui/CompanyChip";
 import { InstitutionChip } from "@/components/ui/InstitutionChip";
 import { AdaLogo } from "@/components/icons/AdaLogo";
@@ -35,10 +36,13 @@ const components: MDXComponents = {
             {children}
         </h2>
     ),
-    h3: ({ children, ...props }) => (
+    h3: ({ children, className, ...props }) => (
         <h3
             {...props}
-            className="mt-8 text-balance text-xl font-semibold tracking-tight"
+            className={cn(
+                "mt-8 text-balance text-xl font-semibold tracking-tight leading-[1.55]",
+                className,
+            )}
         >
             {children}
         </h3>

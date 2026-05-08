@@ -30,7 +30,7 @@ export function GrenobleInpLogo({ className, ...props }: GrenobleInpLogoProps) {
         <span
             aria-hidden="true"
             className={cn(
-                "inline-flex h-8 w-8 items-center justify-center [&>svg]:block [&>svg]:h-full [&>svg]:w-full",
+                "inline-flex size-5 items-center justify-center [&>svg]:block [&>svg]:h-full [&>svg]:w-full",
                 className,
             )}
             dangerouslySetInnerHTML={{ __html: SVG_MARKUP }}
