@@ -135,7 +135,7 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-tight">
                       Personal projects
                   </div>
-                  <div className="text-xs text-muted">Builder mode</div>
+                  <div className="text-xs text-muted">Building software</div>
               </div>
                 <div className="mt-4 flex flex-wrap items-center gap-3">
                     <div
