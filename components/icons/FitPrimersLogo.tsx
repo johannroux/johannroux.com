@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import {cn} from "@/lib/cn";
+import { cn } from "@/lib/cn";
 
 export function FitPrimersLogo({
   className,

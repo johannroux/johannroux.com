@@ -115,8 +115,8 @@ export default function Home() {
               </div>
               <p className="mt-4 text-sm text-muted">
                   Professional work across startups and consulting: backend
-                  engineering, platform ownership, and team leadership, shipping in
-                  regulated, high-stakes environments.
+                  engineering, platform ownership, and team leadership, shipping
+                  in regulated, high-stakes environments.
               </p>
               <div className="mt-4">
                 <Link
@@ -142,24 +142,24 @@ export default function Home() {
                         aria-hidden="true"
                         className="grid h-12 w-12 shrink-0 place-items-center transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
                     >
-                        <FitPrimersLogo className="h-10 w-10" title="" aria-hidden/>
+                        <FitPrimersLogo className="h-10 w-10" title="" aria-hidden />
                     </div>
                     <div
                         aria-hidden="true"
                         className="grid h-12 w-12 shrink-0 place-items-center transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
                     >
-                        <KhonsuLogo className="h-9 w-9" title="" aria-hidden/>
+                        <KhonsuLogo className="h-9 w-9" title="" aria-hidden />
                     </div>
                     {[
-                        {src: "/icons/khonsu/alphabets.png", bg: "#4EC3F7"},
-                        {src: "/icons/khonsu/dinosaurs.png", bg: "#C0CA33"},
-                        {src: "/icons/khonsu/freestyle.png", bg: "#FFB200"},
+                        { src: "/icons/khonsu/alphabets.png", bg: "#4EC3F7" },
+                        { src: "/icons/khonsu/dinosaurs.png", bg: "#C0CA33" },
+                        { src: "/icons/khonsu/freestyle.png", bg: "#FFB200" },
                     ].map((i) => (
                         <div
                             key={i.src}
                             aria-hidden="true"
                             className="grid h-12 w-12 shrink-0 place-items-center rounded-[16px] border border-border/60 shadow-soft transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-0.5 motion-safe:hover:scale-[1.03]"
-                            style={{backgroundColor: i.bg}}
+                            style={{ backgroundColor: i.bg }}
                         >
                             <Image
                                 src={i.src}

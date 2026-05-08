@@ -98,9 +98,7 @@ export default async function ProjectsPage() {
                 </Link>
               </div>
 
-              <div
-                  className={cn("relative mt-7 h-60 w-full", "sm:h-70")}
-              >
+                <div className={cn("relative mt-7 h-60 w-full", "sm:h-70")}>
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute -left-10 top-6 h-44 w-44 rounded-full bg-accent/10 blur-3xl"
@@ -110,7 +108,7 @@ export default async function ProjectsPage() {
                   className="pointer-events-none absolute -right-10 bottom-2 h-52 w-52 rounded-full bg-accent/10 blur-3xl"
                 />
 
-                  <div className="absolute left-[10%] top-7 w-47.5 rotate-[-10deg] sm:left-[12%] sm:top-8 sm:w-55">
+                    <div className="absolute left-[10%] top-7 w-47.5 rotate-[-10deg] sm:left-[12%] sm:top-8 sm:w-55">
                   <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
                     <Image
                       src="/fitprimers/1.png"
@@ -124,7 +122,7 @@ export default async function ProjectsPage() {
                   </div>
                 </div>
 
-                  <div className="absolute right-[8%] top-10 w-50 rotate-[8deg] sm:right-[10%] sm:top-11 sm:w-58.75">
+                    <div className="absolute right-[8%] top-10 w-50 rotate-[8deg] sm:right-[10%] sm:top-11 sm:w-58.75">
                   <div className="rounded-[28px] border border-border/70 bg-background/70 p-2 shadow-[0_18px_50px_-22px_rgba(0,0,0,0.45)] backdrop-blur-sm">
                     <Image
                       src="/fitprimers/2.png"
@@ -153,8 +151,8 @@ export default async function ProjectsPage() {
                   </div>
                   <p className="mt-2 text-sm text-muted">
                     Educational apps that turn curiosity into a treasure trove
-                      of information, designed for deep dives, with quizzes to test
-                    what you’ve learned.
+                      of information, designed for deep dives, with quizzes to
+                      test what you’ve learned.
                   </p>
                 </div>
                 <div

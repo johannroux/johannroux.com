@@ -11,10 +11,7 @@ const RAW_SVG = fs.readFileSync(
 // Make the dark-navy paths theme-aware: in dark mode, --kth-navy is set to
 // white in globals.css. The KTH SVG already uses an inline `<style>` block,
 // where CSS `var()` resolves natively.
-const SVG_MARKUP = RAW_SVG.replaceAll(
-    '#000061',
-    "var(--kth-navy, #000061)",
-);
+const SVG_MARKUP = RAW_SVG.replaceAll("#000061", "var(--kth-navy, #000061)");
 
 type KthLogoProps = Readonly<
     Omit<

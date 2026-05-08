@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         },
     ],
       apple: [
-          {url: `${basePath}/favicon/apple-touch-icon.png`, sizes: "180x180"},
+          { url: `${basePath}/favicon/apple-touch-icon.png`, sizes: "180x180" },
       ],
     shortcut: [{ url: `${basePath}/favicon/favicon.ico` }],
   },

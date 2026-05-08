@@ -13,9 +13,10 @@ const RAW_SVG = fs.readFileSync(
 // `style` declaration because `var()` only resolves inside CSS, not in SVG
 // attribute values (notably in Safari). #18161b and #19171c are the same color
 // modulo design-tool rounding, so we collapse them under a single variable.
-const SVG_MARKUP = RAW_SVG
-    .replace(/fill="#18161b"/g, 'style="fill: var(--inp-dark, #18161b)"')
-    .replace(/fill="#19171c"/g, 'style="fill: var(--inp-dark, #18161b)"');
+const SVG_MARKUP = RAW_SVG.replace(
+    /fill="#18161b"/g,
+    'style="fill: var(--inp-dark, #18161b)"',
+).replace(/fill="#19171c"/g, 'style="fill: var(--inp-dark, #18161b)"');
 
 type GrenobleInpLogoProps = Readonly<
     Omit<
@@ -24,10 +25,7 @@ type GrenobleInpLogoProps = Readonly<
     >
 >;
 
-export function GrenobleInpLogo({
-                                    className,
-                                    ...props
-                                }: GrenobleInpLogoProps) {
+export function GrenobleInpLogo({ className, ...props }: GrenobleInpLogoProps) {
     return (
         <span
             aria-hidden="true"

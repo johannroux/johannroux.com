@@ -10,10 +10,10 @@
   --accent-2: #0f766e;
   --shadow: 0 1px 0 rgba(17, 17, 18, 0.06), 0 8px 24px rgba(17, 17, 18, 0.08);
     /* Fallbacks: real values are injected by next/font via <html className=...> */
-    --font-geist-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    --font-geist-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 @theme inline {
@@ -39,7 +39,7 @@
     --border: rgba(244, 244, 245, 0.12);
     --accent: #67e8f9;
     --accent-2: #5eead4;
-    --shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 38px rgba(0, 0, 0, 0.45);
+      --shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 38px rgba(0, 0, 0, 0.45);
       --ada-navy: #ffffff;
       --kth-navy: #ffffff;
       --inp-dark: #ffffff;
@@ -61,15 +61,15 @@ body {
 
 /* Subtle grid for “crafted” feel */
 .bg-grid {
-  background-image: linear-gradient(
-          to right,
-          color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
-          transparent 1px
+    background-image: linear-gradient(
+            to right,
+            color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
+            transparent 1px
     ),
     linear-gradient(
-          to bottom,
-          color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
-          transparent 1px
+            to bottom,
+            color-mix(in oklab, var(--foreground) 6%, transparent) 1px,
+            transparent 1px
     );
   background-size: 32px 32px;
   background-position: center;
